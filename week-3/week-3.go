@@ -3,48 +3,37 @@ package main
 import "fmt"
 
 func bilangan_ganjil(angka int) bool {
-	if angka%2 == 1 {
-		return true
-	} else {
-		return false
-	}
+	var hasil bool
+	hasil = angka%2 == 1
+	return hasil
 }
 
 func cumlaude(semester int, nilai_eprt int) bool {
-	if semester <= 8 && nilai_eprt > 500 {
-		return true
-	} else {
-		return false
-	}
+	var hasil bool
+	hasil = semester <= 8 && nilai_eprt > 500
+	return hasil
 }
 
 func tiga_digit_terurut_ke_kecil(angka int) bool {
 	// 3 digit angkanya itu terurut dari besar ke kecil
 	var digit_1, digit_2, digit_3 int
+	var hasil bool
 	digit_1 = angka / 100
 	digit_2 = (angka / 10) % 10
 	digit_3 = angka % 10
-	if digit_1 > digit_2 && digit_2 > digit_3 {
-		return true
-	} else {
-		return false
-	}
+	hasil = digit_1 > digit_2 && digit_2 > digit_3
+	return hasil
 }
 
 func tiga_digit_terurut(angka int) bool {
 	// 3 digit angkanya bisa terurut dari kecil/besar
 	var digit_1, digit_2, digit_3 int
+	var hasil bool
 	digit_1 = angka / 100
 	digit_2 = (angka / 10) % 10
 	digit_3 = angka % 10
-
-	if digit_1 > digit_2 && digit_2 > digit_3 {
-		return true
-	} else if digit_1 < digit_2 && digit_2 < digit_3 {
-		return true
-	} else {
-		return false
-	}
+	hasil = digit_1 > digit_2 && digit_2 > digit_3 || digit_1 < digit_2 && digit_2 < digit_3
+	return hasil
 }
 
 func main() {
