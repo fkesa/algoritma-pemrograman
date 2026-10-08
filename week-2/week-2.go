@@ -45,7 +45,7 @@ func lingkaran() {
 	fmt.Println(luas, keliling)
 }
 
-func fungsi_fx_xy() {
+func fungsi_xy() {
 	var x, y int
 	var hasil float64
 	fmt.Scan(&x, &y)
