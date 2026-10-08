@@ -69,22 +69,22 @@ func soal_4_bola_terberat() {
 
 func soal_5_koper() {
 	var n_penumpang int
-	var berat_koper_n_penumpang, total_berat, rata_rata, data_berat_koper float64
+	var berat_koper_n_penumpang, rata_rata, total_berat_koper float64
 	
 	fmt.Scan(&n_penumpang)
 	for range n_penumpang {
 		fmt.Print("Masukkan berat koper: ")
 		fmt.Scan(&berat_koper_n_penumpang)
-		data_berat_koper += berat_koper_n_penumpang
+		total_berat_koper += berat_koper_n_penumpang
 	}
-	rata_rata = total_berat / float64(n_penumpang)
+	rata_rata = total_berat_koper / float64(n_penumpang)
 	fmt.Println(rata_rata)
 }
 
 func main() {
-	soal_1_lemari_baju()
-	soal_2_membuat_kopi()
-	soal_3_bola_terurut()
-	soal_4_bola_terberat()
+	// soal_1_lemari_baju()
+	// soal_2_membuat_kopi()
+	// soal_3_bola_terurut()
+	// soal_4_bola_terberat()
 	soal_5_koper()
 }
