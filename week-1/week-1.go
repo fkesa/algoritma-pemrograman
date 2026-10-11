@@ -86,5 +86,5 @@ func main() {
 	// soal_2_membuat_kopi()
 	// soal_3_bola_terurut()
 	// soal_4_bola_terberat()
-	soal_5_koper()
+	// soal_5_koper()
 }
