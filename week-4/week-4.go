@@ -79,11 +79,16 @@ func investasi_saham() {
 	ivs.total_penjualan = ivs.harga_jual * ivs.jumlah_saham
 	ivs.keuntungan_kotor = ivs.total_penjualan - ivs.investasi_awal
 	ivs.biaya_transaksi = 2.0 / 1000.0 * ivs.total_penjualan
-	ivs.pajak_keuntungan = 10.0 / 100.0 * ivs.total_penjualan
+	// ivs.pajak_keuntungan = math.Max(0, 10.0 / 100.0 * ivs.keuntungan_kotor) // Teknik lain
+	if ivs.keuntungan_kotor > 0 {
+        ivs.pajak_keuntungan = 10.0 / 100.0 * ivs.keuntungan_kotor
+    } else {
+        ivs.pajak_keuntungan = 0
+    }
 	ivs.keuntungan_bersih = ivs.keuntungan_kotor - ivs.biaya_transaksi - ivs.pajak_keuntungan
 	fmt.Println(ivs.keuntungan_bersih)
 }
 
 func main() {
-
+	investasi_saham()
 }
