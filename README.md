@@ -67,6 +67,7 @@ kamus
   >
   constant jumlah_menit : int <- 1234 
   b1, b2, b3  : integer
+  wt : waktu 
 ```
 
 ## `algoritma`
