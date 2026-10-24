@@ -1,0 +1,86 @@
+program lemari_baju
+kamus
+    lebar, panjang, tinggi, volume : integer
+algoritma
+    input(lebar, panjang, tinggi)
+    volume <- panjang * lebar * tinggi
+    output(volume)
+endprogram
+
+program membuat_kopi
+kamus
+    cangkir_kopi, air_panas, kopi, gula : boolean
+algoritma
+    air_panas <- true
+    kopi <- true
+    gula <- true
+    cangkir_kopi <- (air_panas = true) AND (kopi = true) AND (gula = true)
+    output(cangkir_kopi)
+endprogram
+
+program bola_terurut
+kamus
+    bola_a, bola_b, bola_c : integer
+algoritma
+    input(bola_a, bola_b, bola_c)
+    if bola_a < bola_b then
+        if bola_b < bola_c then
+            output(bola_a, bola_b, bola_c)
+        else if bola_b > bola_c then
+            if bola_c < bola_a then
+                output(bola_c, bola_a, bola_b)
+            else
+                output(bola_a, bola_c, bola_b)
+            endif
+        endif
+    else if bola_a > bola_b then
+        if bola_a < bola_c then
+            output(bola_b, bola_a, bola_c)
+        else if bola_a > bola_c then
+            if bola_c < bola_b then
+                output(bola_c, bola_b, bola_a)
+            else
+                output(bola_b, bola_c, bola_a)
+            endif
+        endif
+    endif
+endprogram
+
+program bola_terberat
+kamus
+    bola_a, bola_b, bola_c, bola_d, max_berat : integer
+    bola_terberat : string
+algoritma
+    input(bola_a, bola_b, bola_c, bola_d)
+    if bola_a > bola_b then
+        max_berat <- bola_a
+        bola_terberat <- "bola_a"
+    else
+        max_berat <- bola_b
+        bola_terberat <- "bola_b"
+    endif
+
+    if bola_c > max_berat then
+        max_berat <- bola_c
+        bola_terberat <- "bola_c"
+    else if bola_d > max_berat then
+        max_berat <- bola_d
+        bola_terberat <- "bola_d"
+    endif
+    output(bola_terberat, "dgn berat:", max_berat)
+endprogram
+
+program koper
+kamus
+    n_penumpang, i : integer
+    berat_koper_n_penumpang, rata_rata, total_berat_koper : real
+algoritma
+    input(n_penumpang)
+    total_berat_koper <- 0.0
+    for i <- 1 to n_penumpang do
+        input(berat_koper_n_penumpang)
+        total_berat_koper <- total_berat_koper + berat_koper_n_penumpang
+    endfor
+    rata_rata <- total_berat_koper / n_penumpang
+    output(rata_rata)
+endprogram

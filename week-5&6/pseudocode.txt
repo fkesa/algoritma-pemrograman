@@ -1,0 +1,115 @@
+program cetak_teks
+kamus
+    i, n : integer
+    teks : string
+algoritma
+    input(n, teks)
+    for i <- 1 to n do
+        output(teks)
+    endfor
+endprogram
+
+program kue
+kamus
+    i, n, bil, jumlah : integer
+algoritma
+    input(n)
+    for i <- 1 to n do
+        input(bil)
+        jumlah <- bil * 10
+        output(jumlah)
+    endfor
+endprogram
+
+program perkalian
+kamus
+    i, n, bil, hasil : integer
+algoritma
+    input(n)
+    for i <- 1 to n do
+        input(bil)
+        hasil <- bil * i
+        output(hasil)
+    endfor
+endprogram
+
+program olahraga
+kamus
+    i, j, n, langkah, jumlah : integer
+algoritma
+    input(n)
+    for i <- 1 to n do
+        jumlah <- 0
+        for j <- 1 to 7 do
+            input(langkah)
+            jumlah <- jumlah + langkah
+        endfor
+        output(jumlah)
+    endfor
+endprogram
+
+program sandi
+kamus
+    i, n, bil, b1, b4, jumlah : integer
+algoritma
+    input(n)
+    jumlah <- 0
+    for i <- 1 to n do
+        input(bil)
+        b1 <- bil DIV 1000
+        b4 <- bil MOD 10
+        jumlah <- jumlah + b1 + b4
+        output(jumlah)
+    endfor
+endprogram
+
+program bidang_persegi
+kamus
+    i, n, sisi, luas, keliling : integer
+algoritma
+    input(n)
+    for i <- 1 to n do
+        input(sisi)
+        luas <- sisi * sisi
+        keliling <- 4 * sisi
+        output(luas, keliling)
+    endfor
+endprogram
+
+program koding
+kamus
+    i, n, bil, jumlah, rata_rata : integer
+algoritma
+    input(n)
+    jumlah <- 0
+    for i <- 1 to n do
+        input(bil)
+        jumlah <- jumlah + bil
+    endfor
+    rata_rata <- jumlah DIV n
+    output(rata_rata)
+endprogram
+
+program faktorial
+kamus
+    i, n, faktorial : integer
+algoritma
+    input(n)
+    faktorial <- 1
+    for i <- n downto 1 do
+        faktorial <- faktorial * i
+    endfor
+    output(faktorial)
+endprogram
+
+program faktor_bilangan
+kamus
+    i, n : integer
+    hasil : boolean
+algoritma
+    input(n)
+    for i <- 1 to n do
+        hasil <- (n MOD i = 0)
+        output(hasil)
+    endfor
+endprogram

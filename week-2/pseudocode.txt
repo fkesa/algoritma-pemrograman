@@ -1,0 +1,82 @@
+program mencari_posisi
+kamus
+    posisi_awal, kecepatan, selang_waktu, posisi_akhir : integer
+algoritma
+    input(posisi_awal, kecepatan, selang_waktu)
+    posisi_akhir <- posisi_awal + (kecepatan * selang_waktu)
+    output(posisi_akhir)
+endprogram
+
+program temperatur
+kamus
+    suhu_celcius, suhu_reamur, suhu_fahrenheit, suhu_kelvin : real
+algoritma
+    input(suhu_celcius)
+    suhu_reamur <- (suhu_celcius * 4.0 / 5.0)
+    suhu_fahrenheit <- (suhu_celcius * 9.0 / 5.0) + 32.0
+    suhu_kelvin <- suhu_celcius + 273.15
+    output(suhu_reamur)
+    output(suhu_fahrenheit)
+    output(suhu_kelvin)
+endprogram
+
+program belajar_character
+kamus
+    alfabet : char
+algoritma
+    input(alfabet)
+    output(alfabet)
+endprogram
+
+program persegi_panjang
+kamus
+    p, l, luas, keliling : integer
+algoritma
+    input(p, l)
+    luas <- p * l
+    keliling <- 2 * p + 2 * l
+    output(luas, keliling)
+endprogram
+
+program lingkaran
+kamus
+    jari_jari, luas, keliling : real
+algoritma
+    input(jari_jari)
+    luas <- 22.0 / 7.0 * jari_jari * jari_jari
+    keliling <- 22.0 / 7.0 * 2.0 * jari_jari
+    output(luas, keliling)
+endprogram
+
+program fungsi_xy
+kamus
+    x, y : integer
+    hasil : real
+algoritma
+    input(x, y)
+    hasil <- 1.0 / (3.0 * x * 3.0 * x + 10.0) + 10.0 * y + 7.0
+    output(hasil)
+endprogram
+
+program digit
+kamus
+    angka, d1, d2, d3 : integer
+algoritma
+    input(angka)
+    d1 <- angka DIV 100
+    d2 <- (angka DIV 10) MOD 10
+    d3 <- angka MOD 10
+    output(d1, d2, d3)
+endprogram
+
+program toko
+kamus
+    barang1, barang2, barang3 : integer
+    af_barang1, af_barang2, af_barang3 : real
+algoritma
+    input(barang1, barang2, barang3)
+    af_barang1 <- barang1 + (barang1 * 5.0 / 100.0)
+    af_barang2 <- barang2 + (barang2 * 5.0 / 100.0)
+    af_barang3 <- barang3 + (barang3 * 5.0 / 100.0)
+    output(af_barang1, af_barang2, af_barang3)
+endprogram

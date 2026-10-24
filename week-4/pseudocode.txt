@@ -1,0 +1,90 @@
+program transaksi
+kamus
+    type d_transaksi <
+        nama_barang   : string
+        jumlah_barang : integer
+        harga_satuan  : real
+        total_harga   : real
+    >
+    t : d_transaksi
+algoritma
+    input(t.harga_satuan, t.jumlah_barang)
+    t.total_harga <- t.harga_satuan * t.jumlah_barang
+    output(t.total_harga)
+endprogram
+
+program persegi_panjang_tipe
+kamus
+    type d_persegi_panjang <
+        lebar    : real
+        panjang  : real
+        keliling : real
+        luas     : real
+    >
+    pp : d_persegi_panjang
+algoritma
+    input(pp.panjang, pp.lebar)
+    pp.luas <- pp.panjang * pp.lebar
+    pp.keliling <- 2.0 * (pp.panjang + pp.lebar)
+    output(pp.luas, pp.keliling)
+endprogram
+
+program bmi
+kamus
+    type d_bmi <
+        nama      : string
+        berat     : real
+        tinggi    : real
+        nilai_bmi : real
+    >
+    b : d_bmi
+algoritma
+    input(b.nama, b.berat, b.tinggi)
+    b.nilai_bmi <- b.berat / (b.tinggi * b.tinggi)
+    output(b.nilai_bmi)
+endprogram
+
+program gaji_karyawan
+kamus
+    type d_gaji_karyawan <
+        nama       : string
+        gaji_pokok : real
+        tunjangan  : real
+        potongan   : real
+        total_gaji : real
+    >
+    gk : d_gaji_karyawan
+algoritma
+    input(gk.nama, gk.gaji_pokok, gk.tunjangan, gk.potongan)
+    gk.total_gaji <- gk.gaji_pokok + gk.tunjangan + gk.potongan
+    output(gk.total_gaji)
+endprogram
+
+program investasi_saham
+kamus
+    type d_investasi_saham <
+        harga_beli        : real
+        harga_jual        : real
+        jumlah_saham      : real
+        investasi_awal    : real
+        total_penjualan   : real
+        keuntungan_kotor  : real
+        biaya_transaksi   : real
+        pajak_keuntungan  : real
+        keuntungan_bersih : real
+    >
+    ivs : d_investasi_saham
+algoritma
+    input(ivs.harga_beli, ivs.harga_jual, ivs.jumlah_saham)
+    ivs.investasi_awal <- ivs.harga_beli * ivs.jumlah_saham
+    ivs.total_penjualan <- ivs.harga_jual * ivs.jumlah_saham
+    ivs.keuntungan_kotor <- ivs.total_penjualan - ivs.investasi_awal
+    ivs.biaya_transaksi <- (2.0 / 1000.0) * ivs.total_penjualan
+    if ivs.keuntungan_kotor > 0 then
+        ivs.pajak_keuntungan <- (10.0 / 100.0) * ivs.keuntungan_kotor
+    else
+        ivs.pajak_keuntungan <- 0.0
+    endif
+    ivs.keuntungan_bersih <- ivs.keuntungan_kotor - ivs.biaya_transaksi - ivs.pajak_keuntungan
+    output(ivs.keuntungan_bersih)
+endprogram

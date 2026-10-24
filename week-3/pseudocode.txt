@@ -1,0 +1,45 @@
+program cek_bilangan_ganjil
+kamus
+    angka : integer
+    hasil : boolean
+algoritma
+    input(angka)
+    hasil <- (angka MOD 2 = 1)
+    output(hasil)
+endprogram
+
+program cek_cumlaude
+kamus
+    semester, nilai_eprt : integer
+    hasil : boolean
+algoritma
+    input(semester, nilai_eprt)
+    hasil <- (semester <= 8) AND (nilai_eprt > 500)
+    output(hasil)
+endprogram
+
+program cek_tiga_digit_terurut_ke_kecil
+kamus
+    angka, digit_1, digit_2, digit_3 : integer
+    hasil : boolean
+algoritma
+    input(angka)
+    digit_1 <- angka DIV 100
+    digit_2 <- (angka DIV 10) MOD 10
+    digit_3 <- angka MOD 10
+    hasil <- (digit_1 > digit_2) AND (digit_2 > digit_3)
+    output(hasil)
+endprogram
+
+program cek_tiga_digit_terurut
+kamus
+    angka, digit_1, digit_2, digit_3 : integer
+    hasil : boolean
+algoritma
+    input(angka)
+    digit_1 <- angka DIV 100
+    digit_2 <- (angka DIV 10) MOD 10
+    digit_3 <- angka MOD 10
+    hasil <- ((digit_1 > digit_2) AND (digit_2 > digit_3)) OR ((digit_1 < digit_2) AND (digit_2 < digit_3))
+    output(hasil)
+endprogram
