@@ -1,0 +1,26 @@
+program fajar_prisma
+kamus
+    type prisma <
+        panjang : real
+        lebar : real
+        tinggi : real
+        volume : real
+        luas_permukaan : real
+    >
+    pr : prisma
+algoritma
+    input(pr.panjang, pr.lebar, pr.tinggi)
+    volume <- pr.panjang * pr.lebar * pr.tinggi
+    luas_permukaan <- 2*(pr.panjang * pr.lebar) + ((2*pr.panjang+2*pr.lebar)*pr.tinggi)
+    output(volume, luas_permukaan)
+endprogram
+
+program linda_waktu
+kamus
+    jumlah_detik, j, m, d : integer
+algoritma
+    input(jumlah_detik)
+    j <- jumlah_detik / 60
+    m <- (jumlah_detik % 60) / 10
+    d <- jumlah_detik % 10
+endprogram
